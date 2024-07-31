@@ -1,0 +1,51 @@
+.container {
+  width: min(450px, 90%);
+  background: #8c92bb;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px rgba(0, 0, 0, 0.3) 0px
+    30px 60px -30px;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem; /* 1.25: top-bottom; 1.75: lef-right */
+  border-bottom: 1px solid #858bb2;
+}
+
+.wrapper {
+  margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box {
+  /* se pone posicionamiento relativo porque un elemento
+ hijo se va a mover dentro de las dimensiones del padre */
+  position: relative;
+}
+
+/* Inicio Estilos para caja que muestra contraseña y la etiqueta span */
+.input-box input {
+  width: 83%;
+  height: 53px;
+  color: #fff;
+  background: #858bb2;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #000;
+  padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span {
+  position: absolute;
+  right: 13px;
+  cursor: pointer;
+  line-height: 53px;
+  color: #000;
+}
+
+.input-box span:hover {
+  color: #46495e;
+}
+/* Fin Estilos para caja que muestra contraseña y la etiqueta span */
