@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Generador de contraseñas</title>
 
@@ -20,7 +21,7 @@
                 <span id="copy" onclick="copyPassword()">Copy</span>
             </div>
             <div class="pass-settings">
-                <label for="" class="title">Password Settings</label>
+                <label class="title">Password Settings</label>
                 <svg width="24px" height="24px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                     fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -31,29 +32,35 @@
                         </path>
                     </g>
                 </svg>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="options">
+                    <li class="option">
+                        <input checked id="lowercase" type="checkbox">
+                        <label for="lowercase">Lowercase (a-z)</label>
+                    </li>
+                    <li class="option">
+                        <input id="uppercase" type="checkbox">
+                        <label for="uppercase">Uppercase (A-Z)</label>
+                    </li>
+                    <li class="option">
+                        <input id="numbers" type="checkbox" checked>
+                        <label for="numbers">Number (0-9)</label>
+                    </li>
+                    <li class="option">
+                        <input id="symbols" type="checkbox" checked>
+                        <label for="symbols">Symbols (!-$^+)</label>
+                    </li>
+                    <li class="option">
+                        <input id="exc-duplicate" type="checkbox">
+                        <label for="exc-duplicate">Exclude Duplicate</label>
+                    </li>
+                    <li class="option">
+                        <input id="spaces" type="checkbox">
+                        <label for="spaces">Include Spaces</label>
+                    </li>
                 </ul>
-
-
-
-
-
             </div>
-
-
-
+            <button class="generate-btn" id="generate" onclick="generatePassword()">Generate Password</button>
         </div>
-
-
-
-
-
     </div>
 </body>
 
