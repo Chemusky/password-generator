@@ -1,7 +1,3 @@
-// const srt = "hello world";
-
-// console.log(srt[1]);
-
 // Se declaran constantes que almacenan las letras (en mayúscula y minúscula), números, carácteres y espacios
 const lowercaseChars = "abcdefghijklmnñopqrstuvwxiz";
 const uppercaseChars = "ABCDEFGHIJKLMNÑOPQRSTUVWZYZ";
@@ -14,4 +10,36 @@ function getRandomChar(chars) {
   const index = Math.floor(Math.random() * chars.length);
   return chars[index];
 }
-console.log(getRandomChar(symbolChars));
+// console.log(getRandomChar(symbolChars));
+
+function generatePassword() {
+  const passwordInput = document.getElementById("password");
+  const lowercaseCheckbox = document.getElementById("lowercase");
+  const uppercaseCheckbox = document.getElementById("uppercase");
+  const numbersCheckbox = document.getElementById("numbers");
+  const symbolsCheckbox = document.getElementById("symbols");
+  const excludeDuplicateCheckbox = document.getElementById("exc-duplicate");
+  const spacesCheckbox = document.getElementById("spaces");
+
+  // las 5 condicionales signfican que en el momento que se selecciona la casilla en cuestión,
+  // a la variable characters se le añade los caracteres almacenados en constantes
+  let characters = "";
+  if (lowercaseCheckbox.checked) characters += lowercaseChars;
+  if (uppercaseCheckbox.checked) characters += uppercaseChars;
+  if (numbersCheckbox.checked) characters += numberChars;
+  if (symbolsCheckbox.checked) characters += symbolChars;
+  if (spacesCheckbox.checked) characters += spaceChar;
+
+  if (characters === "") {
+    // si no hay caracteres disponibles, no genera una contraseña nueva
+    passwordInput.value = "";
+    return;
+  }
+
+  let password = "";
+  const length = 12; /* Longitud de la contraseña por defecto */
+
+  while (password.length < length) {
+    let char = getRandomChar(characters);
+  }
+}
