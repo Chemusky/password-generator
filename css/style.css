@@ -55,6 +55,12 @@
   margin: 1.56rem 0 1.25rem;
 }
 
+.flex-container-svg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .pass-settings .options {
   display: flex;
   /* list-style: none;  EN EL ARCHIVO RESET LO TENGO PUESTO*/
