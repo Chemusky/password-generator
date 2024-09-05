@@ -41,5 +41,15 @@ function generatePassword() {
 
   while (password.length < length) {
     let char = getRandomChar(characters);
+    if (excludeDuplicateCheckbox.checked && password.includes(char)) continue;
+    password += char;
   }
+  passwordInput.value = password;
+}
+
+function copyPassword() {
+  const passwordInput = document.getElementById("password");
+  const copyButton = document.getElementById("copy");
+
+  passwordInput.disabled = false;
 }
