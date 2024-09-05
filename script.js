@@ -51,5 +51,15 @@ function copyPassword() {
   const passwordInput = document.getElementById("password");
   const copyButton = document.getElementById("copy");
 
-  passwordInput.disabled = false;
+  passwordInput.select();
+  passwordInput.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(passwordInput.value);
+
+  // alert(`La contraseña copiada es ${passwordInput.value}`); /* se muestra un mensaje de alerta de lo que se ha copiado al portapales */
+
+  copyButton.textContent = "Copied!";
+  setTimeout(() => {
+    copyButton.textContent = "Copy";
+  }, 2000);
 }
